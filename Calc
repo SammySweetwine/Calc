@@ -1,0 +1,187 @@
+loop do
+
+ starting_price = 0.00
+ price_from_0_to_2000 = 65.99
+ price_from_2000_to_3000 = 73.69
+ price_from_3000_to_3500 = 84.68
+ price_from_3500_to_4000 = 90.18
+ price_from_4000_to_4500 = 115.48
+ price_from_4500_to_5000 = 131.98
+ price_from_5000_to_5500 = 164.97
+ price_from_5500_to_6000 = 247.45
+ price_from_6000_to_6500 = 434.42
+ price_from_6500_to_7000 = 478.41
+ price_from_7000_to_7500 = 538.90
+ price_from_7500_to_8000 = 648.88
+ price_from_8000_to_cyberkotleta = 1430.00
+ katka = 30.00
+
+ puts "--------------"
+ puts "Стартовый птс:"
+ start = gets.chomp.to_f
+ puts "Конечный птс:"
+ finish = gets.chomp.to_f
+ system 'clear'
+ puts ""
+
+ y = 2000 - start
+
+  if y > 0 && finish > 2000 
+   starting_price += (y / katka) * price_from_0_to_2000
+   y = finish - 2000
+  elsif y > 0 && finish <= 2000
+   starting_price += ((finish - start) / katka) * price_from_0_to_2000
+     puts "Цена: #{starting_price.round(2)} рублей"
+  else
+   y = 3000 - start
+  end
+
+   if y > 0 && finish > 3000
+  starting_price += (y / katka) * price_from_2000_to_3000
+  y = finish - 3000
+    elsif y > 0 && finish <= 3000 && finish > 2000 && start > 2000
+  starting_price += ((finish - start) / katka) * price_from_2000_to_3000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 3000 && finish > 2000  
+  starting_price += ((finish - 2000) / katka) * price_from_2000_to_3000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 3500 - start
+  end
+
+    if y > 0 && finish > 3500
+  starting_price += (500 / katka) * price_from_3000_to_3500
+  y = finish - 3500
+   elsif y > 0 && finish <= 3500 && finish > 3000 && start > 3000
+  starting_price += ((finish - start) / katka) * price_from_3000_to_3500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 3500 && finish > 3000
+  starting_price += ((finish - 3000) / katka) * price_from_3000_to_3500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 4000 - start
+  end
+
+     if y > 0 && finish > 4000
+   starting_price += (500 / katka) * price_from_3500_to_4000
+  y = finish - 4000
+    elsif y > 0 && finish <= 4000 && finish > 3500 && start > 3500
+  starting_price += ((finish - start) / katka) * price_from_3500_to_4000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 4000 && finish > 3500
+  starting_price += ((finish - 3500) / katka) * price_from_3500_to_4000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 4500 - start
+  end
+
+     if y > 0 && finish > 4500
+  starting_price += (500 / katka) * price_from_4000_to_4500
+  y = finish - 4500
+  elsif y > 0 && finish <= 4500 && finish > 4000 && start > 4000
+  starting_price += ((finish - start) / katka) * price_from_4000_to_4500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 4500 && finish > 4000
+  starting_price += ((finish - 4000) / katka) * price_from_4000_to_4500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 5000 - start
+  end
+
+     if y > 0 && finish > 5000
+  starting_price += (500 / katka) * price_from_4500_to_5000
+  y = finish - 5000
+  elsif y > 0 && finish <= 5000 && finish > 4500 && start > 4500
+  starting_price += ((finish - start) / katka) * price_from_4500_to_5000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 5000 && finish > 4500
+  starting_price += ((finish - 4500) / katka) * price_from_4500_to_5000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 5500 - start
+  end
+
+     if y > 0 && finish > 5500
+  starting_price += (500 / katka) * price_from_5000_to_5500
+  y = finish - 5500
+    elsif y > 0 && finish <= 5500 && finish > 5000 && start > 5000
+  starting_price += ((finish - start) / katka) * price_from_5000_to_5500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 5500 && finish > 5000
+  starting_price += ((finish - 5000) / katka) * price_from_5000_to_5500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 6000 - start
+  end
+
+     if y > 0 && finish > 6000
+  starting_price += (500 / katka) * price_from_5500_to_6000
+  y = finish - 6000
+    elsif y > 0 && finish <= 6000 && finish > 5500 && start > 5500
+  starting_price += ((finish - start) / katka) * price_from_5500_to_6000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 6000 && finish > 5500
+  starting_price += ((finish - 5500) / katka) * price_from_5500_to_6000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 6500 - start
+  end
+
+     if y > 0 && finish > 6500
+ starting_price += (500 / katka) * price_from_6000_to_6500
+  y = finish - 6500
+   elsif y > 0 && finish <= 6500 && finish > 6000 && start > 6000
+  starting_price += ((finish - start) / katka) * price_from_6000_to_6500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 6500 && finish > 6000
+  starting_price += ((finish - 6000) / katka) * price_from_6000_to_6500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 7000 - start
+  end
+
+     if y > 0 && finish > 7000
+  starting_price += (500 / katka) * price_from_6500_to_7000
+  y = finish - 7000
+    elsif y > 0 && finish <= 7000 && finish > 6500 && start > 6500
+  starting_price += ((finish - start) / katka) * price_from_6500_to_7000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 7000 && finish > 6500
+  starting_price += ((finish - 6500) / katka) * price_from_6500_to_7000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 7500 - start
+  end
+
+     if y > 0 && finish > 7500
+  starting_price += (500 / katka) * price_from_7000_to_7500
+  y = finish - 7500
+    elsif y > 0 && finish <= 7500 && finish > 7000 && start > 7000
+  starting_price += ((finish - start) / katka) * price_from_7000_to_7500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 7500 && finish > 7000
+  starting_price += ((finish - 7000) / katka) * price_from_7000_to_7500
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = 8000 - start
+  end
+
+      if y > 0 && finish > 8000
+  starting_price += (500 / katka) * price_from_7500_to_8000
+  y = finish - 8000
+    elsif y > 0 && finish <= 8000 && finish > 7500 && start > 7500
+  starting_price += ((finish - start) / katka) * price_from_7500_to_8000
+  puts "Цена: #{starting_price.round(2)} рублей"
+  elsif y > 0 && finish <= 8000 && finish > 7500
+  starting_price += ((finish - 7500) / katka) * price_from_7500_to_8000
+    puts "Цена: #{starting_price.round(2)} рублей"
+  else
+  y = finish - start
+  end
+
+  if y > 0 && finish > 8000
+  starting_price += (y / katka) * price_from_8000_to_cyberkotleta
+    puts "Цена: #{starting_price.round(2)} рублей"
+  end
+
+end
